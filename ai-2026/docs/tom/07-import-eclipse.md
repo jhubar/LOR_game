@@ -2,7 +2,7 @@
 
 Guide pas à pas pour Tom. Le projet Eclipse se trouve dans le dossier **`ai-2026`** (pas à la racine `LOR_game`).
 
-> **Fichier résumé à la racine du projet :** [`IMPORT-ECLIPSE.txt`](../IMPORT-ECLIPSE.txt)
+> **Windows :** voir [`IMPORT-ECLIPSE-WINDOWS.txt`](../../IMPORT-ECLIPSE-WINDOWS.txt) et lancer **`import-eclipse-windows.bat`** (double-clic).
 
 ---
 

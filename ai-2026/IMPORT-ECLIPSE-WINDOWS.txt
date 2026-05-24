@@ -1,0 +1,69 @@
+HelmosDeep — Import sous WINDOWS (CMD)
+========================================
+
+1) VERIFIER LE DOSSIER
+----------------------
+Ouvrir CMD (Win+R → cmd → Entree) :
+
+  cd C:\Users\Tom\Documents\LOR_game\ai-2026
+  dir /a .project
+
+Si "Fichier introuvable" → mauvais chemin ou copie incomplete.
+
+
+2) METHODE FACILE — double-clic
+--------------------------------
+Double-cliquer sur :
+
+  import-eclipse-windows.bat
+
+(Situé dans le dossier ai-2026)
+
+Si Eclipse n'est pas dans C:\Program Files\Eclipse\
+→ clic droit sur le .bat → Modifier → changer la ligne ECLIPSE=...
+
+
+3) METHODE CMD — une seule commande
+-----------------------------------
+Adapter TOM_USER et le chemin du projet :
+
+  "C:\Program Files\Eclipse\eclipse.exe" ^
+    -data "C:\Users\Tom\eclipse-workspace" ^
+    -import "C:\Users\Tom\Documents\LOR_game\ai-2026"
+
+PowerShell :
+
+  & "C:\Program Files\Eclipse\eclipse.exe" `
+    -data "$env:USERPROFILE\eclipse-workspace" `
+    -import "$env:USERPROFILE\Documents\LOR_game\ai-2026"
+
+
+4) JAVA 21 (obligatoire)
+------------------------
+  java -version
+
+Doit afficher "21". Sinon installer Temurin JDK 21 :
+  https://adoptium.net/
+
+Puis dans Eclipse :
+  Project → Properties → Java Build Path → Libraries → JRE → JavaSE-21
+
+
+5) LANCER LE JEU SANS ECLIPSE (CMD)
+-----------------------------------
+  cd C:\Users\Tom\Documents\LOR_game\ai-2026
+  mkdir bin
+  dir /s /b src\*.java > sources.txt
+  javac -d bin -cp "resources\libs\*;src" @sources.txt
+  java -cp "bin;resources\libs\*" helmosdeep.HelmosDeep
+
+(Working directory = dossier ai-2026, pour charger resources\)
+
+
+6) IMPORT GRAPHIQUE (si CMD ne convient pas)
+--------------------------------------------
+File → Import → Existing Projects into Workspace
+Browse → dossier ai-2026 (PAS LOR_game seul)
+Cocher helmosdeep.dister.tom → Finish
+
+Guide complet : docs\tom\07-import-eclipse.md

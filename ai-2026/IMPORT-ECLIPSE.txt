@@ -1,0 +1,92 @@
+IMPORT ECLIPSE — HelmosDeep
+============================
+
+Le bouton « Terminer » / « Finish » reste GRIS ?
+→ Eclipse ne voit aucun projet. Lisez ci-dessous.
+
+DOSSIER A OUVRIR (obligatoire)
+------------------------------
+  .../LOR_game/ai-2026/
+
+  Ce dossier doit contenir les fichiers :
+    .project
+    .classpath
+    src/
+    tests/
+    resources/
+
+  NE PAS choisir le dossier LOR_game seul (pas de .project dedans).
+
+
+METHODE A — Import (projet hors du workspace Eclipse)
+-----------------------------------------------------
+1. File → Import…
+2. General → Existing Projects into Workspace → Next
+3. Browse → selectionner le dossier ai-2026 (pas LOR_game)
+4. Cocher la case devant helmosdeep.dister.tom dans la liste
+5. Terminer / Finish doit devenir cliquable
+
+Si la liste est VIDE :
+  - Vous n'etes pas dans ai-2026 → rebrowse
+  OU
+  - Cochez « Search for nested projects » si vous avez choisi LOR_game
+    → cochez helmosdeep.dister.tom qui apparait
+
+
+METHODE B — Open (projet deja dans le dossier workspace)
+--------------------------------------------------------
+Si le repo Git est clone DANS le dossier workspace d'Eclipse,
+Import ne marche pas → utilisez :
+
+1. File → Open Projects from File System…
+2. Directory → ai-2026
+3. Cocher helmosdeep.dister.tom
+4. Finish
+
+
+METHODE C — Ligne de commande (Terminal / CMD)
+---------------------------------------------
+Import automatique au demarrage d'Eclipse :
+
+  macOS :
+    /Applications/Eclipse.app/Contents/MacOS/eclipse \
+      -data "$HOME/eclipse-workspace" \
+      -import "/chemin/absolu/vers/LOR_game/ai-2026"
+
+  Windows CMD :
+    "C:\Program Files\Eclipse\eclipse.exe" ^
+      -data "C:\Users\Tom\eclipse-workspace" ^
+      -import "C:\Users\Tom\LOR_game\ai-2026"
+
+Verifier le projet avant :
+  macOS :  ls -la .project
+  Windows : dir /a .project
+
+Tester sans Eclipse (Java 21) :
+  cd ai-2026
+  ./run-move-tests.sh
+  ./run-game.sh
+
+Details : docs/tom/07-import-eclipse.md (section Methode C)
+
+
+METHODE D — Projet deja present mais ferme
+------------------------------------------
+Package Explorer → clic droit sur helmosdeep.dister.tom → Open Project
+(pas besoin d'importer)
+
+
+Deja importe / conflit de nom
+---------------------------
+Message « already exists in the workspace » :
+  Package Explorer → clic droit sur l'ancien projet → Delete
+  (NE PAS cocher « Delete project contents on disk »)
+  Puis refaire Methode A ou B.
+
+
+Apres import
+------------
+- JDK 21 obligatoire (Properties → Java Build Path → JRE)
+- Lancer : HelmosDeep.java → Run As → Java Application
+
+Guide complet : docs/tom/07-import-eclipse.md

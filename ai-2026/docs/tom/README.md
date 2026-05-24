@@ -17,7 +17,8 @@ L'objectif est de t'aider à comprendre **ce qui a été ajouté ou corrigé**, 
 | 4 | [04-boucle-de-jeu-et-controles.md](./04-boucle-de-jeu-et-controles.md) | Superviseur, vue, touches clavier, flux utilisateur |
 | 5 | [05-journal-des-mises-a-jour.md](./05-journal-des-mises-a-jour.md) | Liste chronologique des corrections et évolutions |
 | 6 | [06-installation-et-tests.md](./06-installation-et-tests.md) | Java 21, scripts, tests unitaires et d'acceptation |
-| 7 | [09-stats-et-affichage-combat.md](./09-stats-et-affichage-combat.md) | Stats live, détail des combats, écran de fin |
+| 7 | [07-import-eclipse.md](./07-import-eclipse.md) | **Importer le projet dans Eclipse** (JDK 21, classpath, dépannage) |
+| 8 | [09-stats-et-affichage-combat.md](./09-stats-et-affichage-combat.md) | Stats live, détail des combats, écran de fin |
 
 ---
 
@@ -29,6 +30,8 @@ cd ai-2026
 ```
 
 **Prérequis :** Java 21 (le moteur graphique `ai-engine-v1.2.0.jar` est compilé pour Java 21).
+
+**Import Eclipse :** voir [07-import-eclipse.md](./07-import-eclipse.md) — importer le dossier **`ai-2026`**, pas la racine du dépôt.
 
 ---
 

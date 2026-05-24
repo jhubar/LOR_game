@@ -17,7 +17,7 @@ Pour le détail fonctionnel, voir aussi [05-journal-des-mises-a-jour.md](./05-jo
 | Point d’entrée | 0 | 1 | 0 |
 | Tests | 2 | 0 | 0 |
 | Scripts shell | 4 | 0 | 0 |
-| Documentation Tom | 9 | 0 | 0 |
+| Documentation Tom | 10 | 1 | 0 |
 | Code brouillon | 0 | 0 | 8 |
 
 ---
@@ -91,6 +91,8 @@ Pour le détail fonctionnel, voir aussi [05-journal-des-mises-a-jour.md](./05-jo
 | Fichier | Modifications principales |
 |---------|---------------------------|
 | `HelmosDeep.java` | Passe `IGameFactory` à `GameOverSupervisor` pour l’écran de fin |
+| `.project` | Retrait plugins PMD (import Eclipse sans extensions obligatoires) |
+| `HelmosDeep.launch` | Configuration Run avec working directory = racine projet |
 
 ---
 
@@ -133,6 +135,7 @@ Les tests d’acceptation du cours **n’ont pas été modifiés** :
 | `docs/tom/04-boucle-de-jeu-et-controles.md` | Clavier, curseur vs sélection, corrections UI |
 | `docs/tom/05-journal-des-mises-a-jour.md` | Journal chronologique des évolutions |
 | `docs/tom/06-installation-et-tests.md` | Java 21, scripts, tests unitaires et TA |
+| `docs/tom/07-import-eclipse.md` | Guide import Eclipse + dépannage |
 | `docs/tom/09-stats-et-affichage-combat.md` | Scores, détail combats, écran fin de partie |
 
 ---

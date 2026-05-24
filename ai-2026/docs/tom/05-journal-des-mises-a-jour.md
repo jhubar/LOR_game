@@ -158,6 +158,8 @@ Chaque entrée indique **quoi**, **pourquoi**, et **où** dans le code.
 
 **Doc détaillée :** [09-stats-et-affichage-combat.md](./09-stats-et-affichage-combat.md)
 
+**Inventaire complet des fichiers :** [00-inventaire-des-modifications.md](./00-inventaire-des-modifications.md)
+
 ---
 
 ## 11. Nettoyage et finitions UX

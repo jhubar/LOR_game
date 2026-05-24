@@ -10,6 +10,7 @@ L'objectif est de t'aider à comprendre **ce qui a été ajouté ou corrigé**, 
 
 | Ordre | Fichier | Contenu |
 |-------|---------|---------|
+| 0 | [00-inventaire-des-modifications.md](./00-inventaire-des-modifications.md) | **Liste complète** des fichiers créés, modifiés et supprimés |
 | 1 | [01-architecture-du-projet.md](./01-architecture-du-projet.md) | Organisation des packages, rôle de chaque couche |
 | 2 | [02-algorithme-de-deplacement.md](./02-algorithme-de-deplacement.md) | Dijkstra, coûts de terrain, points de mouvement |
 | 3 | [03-algorithme-de-combat.md](./03-algorithme-de-combat.md) | Puissance d'attaque, résolution d'un duel, élimination |
